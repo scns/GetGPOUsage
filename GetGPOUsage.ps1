@@ -3,6 +3,7 @@
 
 .DESCRIPTION
 A small and simple script to check if a GPO is linked to an OU and/or if a GPO is Enabled
+when a policy is linked to more then one OU, there will be a row in the export for each OU.
 Export to CSV
 Requirement: RSAT tools installed on de machine
 
