@@ -74,13 +74,13 @@ foreach ($gpo in $gpoGuids)
    if ( $totalSOMName -gt 1){
        $loop=0
        while ($loop -lt $totalSOMName){
-           $loop++
            $objAlias = New-Object psobject   
            Add-Member -InputObject $objAlias -MemberType NoteProperty -Name "Name" -Value $results.gpo.Name 
            Add-Member -InputObject $objAlias -MemberType NoteProperty -Name "SOMName" -Value $results.GPO.LinksTo.SOMName[$loop]
            Add-Member -InputObject $objAlias -MemberType NoteProperty -Name "SOMPATH" -Value $results.GPO.LinksTo.SOMpath[$loop]
            Add-Member -InputObject $objAlias -MemberType NoteProperty -Name "ENABLED" -Value $results.GPO.LinksTo.enabled[$loop]
            $arrAlias += $objAlias
+           $loop++
         }
    } else
    {   $objAlias = New-Object psobject
